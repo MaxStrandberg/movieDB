@@ -9,6 +9,9 @@ import { ActorSearchComponent } from './actor-search/actor-search.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -31,6 +34,8 @@ import { FooterComponent } from './footer/footer.component';
       { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
       { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     ]),
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
