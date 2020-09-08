@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { ActorSearchComponent } from './actor-search/actor-search.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MovieSearchComponent,
     ActorSearchComponent,
     FeedbackComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

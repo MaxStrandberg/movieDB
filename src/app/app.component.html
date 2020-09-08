@@ -9,28 +9,33 @@
   <a class="navbar-brand" routerLink="/home">{{title}}</a>
   
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/home"> Home </a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home"> Home </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/movie-search"> Movie search </a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/movie-search"> Movie search </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/actor-search"> Actor search </a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/actor-search"> Actor search </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/feedback"> Feedback </a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedback"> Feedback </a>
+        </li>
 
-    </ul>
+      </ul>
+   </div> 
   </div>
 </nav>
 
-<div class="container">
+<section class="container">
   <router-outlet></router-outlet> 
-</div>
+</section>
+
+<app-footer class="mt-auto"></app-footer>
+
