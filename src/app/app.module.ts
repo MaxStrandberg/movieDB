@@ -7,6 +7,7 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { RouterModule } from '@angular/router';
 import { ActorSearchComponent } from './actor-search/actor-search.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     HomeComponent,
     MovieSearchComponent,
     ActorSearchComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
       {path: 'home', component: HomeComponent},
       {path: 'movie-search', component: MovieSearchComponent},
       {path: 'actor-search', component: ActorSearchComponent},
-      {path: 'feedback', component: FeedbackComponent}
+      {path: 'feedback', component: FeedbackComponent},
+      { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
+      { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     ]),
   ],
   providers: [],
