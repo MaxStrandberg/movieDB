@@ -1,5 +1,11 @@
-html, body {
-    min-height: 85vh;
+body {
+    background: url('https://images.pexels.com/photos/2680270/pexels-photo-2680270.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    min-height: 65vh;
     height: auto;
     margin: 0;
+    background-size: 100% 100%;
+  }
+
+  #pagebody {
+    min-height: 75vh;
   }

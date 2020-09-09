@@ -1,11 +1,9 @@
-
-<body>
-    <div class="container">
+<div class="container"id="pagebody">
         <input (keyup)="onKey($event)">
-      </div>
+     
     <div *ngFor='let movie of movieList'>
         {{movie.title}}
         <img src='http://image.tmdb.org/t/p/w185/{{movie.poster_path}}' alt="No Image"><br>
     </div>
-</body>
+</div>
 
