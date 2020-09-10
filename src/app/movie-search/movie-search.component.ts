@@ -27,10 +27,13 @@ export class MovieSearchComponent implements OnInit {
 
   onKey(event) {
     const inputValue = event.target.value;
-    this.getMovies(inputValue).subscribe( (data) => {
+    if (event.target.value.length > 1 ){
+
+    this.getMovies(inputValue).pipe().subscribe( (data) => {
         const result = Object.entries(data);
         this.movieList = result[3][1];
     });
+  }
   }
 
 

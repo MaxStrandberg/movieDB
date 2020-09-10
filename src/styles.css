@@ -8,4 +8,44 @@ body {
 
   #pagebody {
     min-height: 75vh;
+    min-width: 50vh;
   }
+
+  h1 {
+    text-align:center;
+}
+
+  .top-buffer { 
+    margin-top:20px;
+    margin-bottom: 5px; 
+  }
+
+  #images{
+    margin-top:20px;
+    width: 175px;
+    list-style-type:none;
+    display: inline-block;
+  }
+
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 500px;
+  width: 100%;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+  
