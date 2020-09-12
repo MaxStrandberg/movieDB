@@ -1,0 +1,23 @@
+<div class="container"id="pagebody">
+    <h1>List off submitted feedback</h1>
+
+    <div class="list row">
+        <div class="col-md-8">
+          <ul class="list-group">
+            <li
+              class="list-group-item"
+              *ngFor="let feedback of feedbacks; let i = index"
+              [class.active]="i == currentIndex"
+              (click)="setActiveFeedback(feedback, i)"
+            >
+                <h4> {{feedback.name}} </h4>
+                <p> {{ feedback.feedback }}</p>
+            </li>
+          </ul>
+
+        </div>
+      
+      </div>
+
+
+</div>

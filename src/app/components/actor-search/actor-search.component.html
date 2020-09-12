@@ -1,0 +1,18 @@
+<div class="container"id="pagebody">
+    <h1>Actors</h1>
+
+    <input class="form-control mr-sm-2" type="text" placeholder="Search for actors" (keyup)="onKey($event)">
+   
+    <ul id="images" *ngFor='let actor of actorList'>
+        
+        <a href="https://en.wikipedia.org/wiki/{{actor.name}}" target="_blank">
+        <li>
+        <img src="https://image.tmdb.org/t/p/w92/{{actor.profile_path}}" alt="No Image" >
+        </li>
+        <li>
+        <p>{{actor.name}}</p>
+        </li>
+        </a>
+    </ul>
+    
+</div>
