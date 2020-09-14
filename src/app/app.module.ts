@@ -2,15 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 import { RouterModule } from '@angular/router';
-import { ActorSearchComponent } from './actor-search/actor-search.component';
-import { FeedbackComponent } from './feedback/feedback.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ActorSearchComponent } from './components/actor-search/actor-search.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { FeedbackListComponent } from './components/feedback-list/feedback-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ActorSearchComponent,
     FeedbackComponent,
     PageNotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    FeedbackListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +34,14 @@ import { FormsModule } from '@angular/forms';
       {path: 'movie-search', component: MovieSearchComponent},
       {path: 'actor-search', component: ActorSearchComponent},
       {path: 'feedback', component: FeedbackComponent},
+      {path: 'feedback-list', component: FeedbackListComponent},
       { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `first-component`
       { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
     ]),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
