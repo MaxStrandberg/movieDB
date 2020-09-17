@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import Feedback from 'src/app/models/feedback';
 import { FeedbackService } from 'src/app/services/feedback.services';
 
@@ -23,7 +23,7 @@ export class FeedbackComponent implements OnInit {
   }
 
   saveFeedback(): void {
-    this.feedBackService.create(this.feedback).then( () => {
+    this.feedBackService.create(this.feedback).then(() => {
       console.log('Feedback sent!');
       this.submitted = true;
     });

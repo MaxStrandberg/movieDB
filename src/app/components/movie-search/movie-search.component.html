@@ -1,7 +1,8 @@
-<div class="container"id="pagebody">
+<div class="container" id="pagebody">
     <h1>Movies</h1>
-    <input class="form-control mr-sm-2" type="text" placeholder="Search for your favorite movies" (keyup)="onKey($event)">
-     
+    <input class="form-control mr-sm-2" type="text" placeholder="Search for your favorite movies"
+        (keyup)="onKey($event)">
+
     <div *ngFor='let movie of movieList'>
         <div class="row top-buffer">
             <div class="col-8">
@@ -17,4 +18,3 @@
         </div>
     </div>
 </div>
-

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, timeout } from 'rxjs/operators';
 import { Observable, of, interval } from 'rxjs';
 import { moviedbkey } from 'src/environments/environment';
@@ -16,11 +16,11 @@ export class MovieSearchComponent implements OnInit {
   title: string;
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
 
 
-  getMovies(term){
+  getMovies(term) {
     return this.http.get('https://api.themoviedb.org/3/search/movie?api_key=' + moviedbkey + '&query=' + term).pipe(
       catchError(err => of([]))
     );
@@ -29,14 +29,14 @@ export class MovieSearchComponent implements OnInit {
 
   onKey(event) {
     const inputValue = event.target.value;
-    if (event.target.value.length > 1 ){
+    if (event.target.value.length > 1) {
 
-    this.getMovies(inputValue).pipe().subscribe( (data) => {
-      console.log(data);
+      this.getMovies(inputValue).pipe().subscribe((data) => {
+        console.log(data);
         const result = Object.entries(data);
         this.movieList = result[3][1];
-    });
-  }
+      });
+    }
   }
 
 

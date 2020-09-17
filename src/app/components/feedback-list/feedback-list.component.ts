@@ -29,14 +29,14 @@ export class FeedbackListComponent implements OnInit {
 
   retrieveFeedbacks() {
     this.feedbackService.getAll().snapshotChanges().pipe(
-      map(changes => 
+      map(changes =>
         changes.map(c =>
-          ({key: c.payload.key, ...c.payload.val() })
-          )
+          ({ key: c.payload.key, ...c.payload.val() })
         )
-      ).subscribe(data => {
-        this.feedbacks = data;
-      });
+      )
+    ).subscribe(data => {
+      this.feedbacks = data;
+    });
   }
 
   setActiveFeedback(feedback, index): void {
