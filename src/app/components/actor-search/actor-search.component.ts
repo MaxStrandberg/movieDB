@@ -3,6 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, timeout } from 'rxjs/operators';
 import { Observable, of, interval } from 'rxjs';
 import { moviedbkey } from '../../../environments/environment';
+import { DomSanitizer } from '@angular/platform-browser';
+
+
 
 @Component({
   selector: 'app-actor-search',
@@ -11,9 +14,11 @@ import { moviedbkey } from '../../../environments/environment';
 })
 export class ActorSearchComponent implements OnInit {
 
+  title = 'app';
   actorList = [];
 
   constructor(private http: HttpClient) { }
+
 
 
   getActors(term) {
