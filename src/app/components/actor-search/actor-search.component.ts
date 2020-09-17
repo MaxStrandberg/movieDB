@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { catchError, timeout } from 'rxjs/operators';
 import { Observable, of, interval } from 'rxjs';
+import { moviedbkey } from '../../../environments/environment';
 @Component({
   selector: 'app-actor-search',
   templateUrl: './actor-search.component.html',
@@ -16,7 +17,7 @@ export class ActorSearchComponent implements OnInit {
 
   getActors(term) {
 
-    return this.http.get("https://api.themoviedb.org/3/search/person?api_key=5168fd8e78b128991776c9d880afc6a5&language=en-US&query="+term+"&page=1&include_adult=true").pipe(
+    return this.http.get('https://api.themoviedb.org/3/search/person?api_key=' + moviedbkey + '&language=en-US&query=' + term + '&page=1&include_adult=true').pipe(
       catchError(err => of([]))
     );
   }
