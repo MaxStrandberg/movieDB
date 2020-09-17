@@ -29,10 +29,10 @@ export class ActorSearchComponent implements OnInit {
   }
 
   onKey(event) {
+    setTimeout(event, 250);
     const inputValue = event.target.value;
-
+    this.actorList = [];
     if (event.target.value.length > 0) {
-      this.actorList = [];
       this.getActors(inputValue).pipe().subscribe((data) => {
         const results = Object.entries(data);
         for (const result of results[3][1]) {
@@ -45,6 +45,9 @@ export class ActorSearchComponent implements OnInit {
           }
         }
       });
+
+
+      
     }
   }
   ngOnInit(): void {

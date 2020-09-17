@@ -4,22 +4,30 @@
     <input class="form-control mr-sm-2" type="text" placeholder="Search for actors" (keyup)="onKey($event)">
 
     <ul id="images" *ngFor='let actor of actorList'>
+        <div class="card" style="width: 10rem; height: 18rem;">
 
-        <a href="https://en.wikipedia.org/wiki/{{actor.name}}" target="_blank">
-            <div *ngIf="actor.profile_path === null; else image">
-                <li>
-                    <img src="../.../../assets/img/noimg.png" width="100px" height="138px">
-                </li>
-            </div>
-            <ng-template #image>
-                <li>
-                    <img src="{{actor.actorimg}}">
-                </li>
-            </ng-template>
-            <li>
-                <p>{{actor.name}}</p>
-            </li>
-        </a>
+            <a href="https://en.wikipedia.org/wiki/{{actor.name}}" target="_blank">
+                <div class="card-header" style="height: 5rem; text-align: center;">
+                    <li>
+                        <p>{{actor.name}}</p>
+                    </li>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="actor.profile_path === null; else image">
+                        <li>
+                            <img src="../.../../assets/img/noimg.png" width="100px" height="138px">
+                        </li>
+                    </div>
+                    <ng-template #image>
+                        <li>
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0" src="{{actor.actorimg}}" alt="Card image cap">
+                            </div>
+                        </li>
+                    </ng-template>
+                </div>
+            </a>
+        </div>
     </ul>
 
 
