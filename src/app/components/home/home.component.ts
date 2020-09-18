@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
 
     this.http.get('https://api.themoviedb.org/3/trending/all/week?api_key=5168fd8e78b128991776c9d880afc6a5').subscribe((data) => {
       const result = Object.entries(data);
-      console.log(data)
       this.trendingList = result[1][1];
       this.trendingList = this.trendingList.slice(1, 6);
     });

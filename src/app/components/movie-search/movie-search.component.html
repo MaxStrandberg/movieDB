@@ -1,9 +1,26 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h3>{{modalinfo.title}}</h3>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+    </div>
+
+    <div class="modal-body">
+
+        <iframe width="775" height="500" [src]="createSafeUrl(modalinfo.trailer)">
+        </iframe>
+    </div>
+</ng-template>
+
+
+
+
 <div class="container" id="pagebody">
     <h1>Movies</h1>
-    <input class="form-control mr-sm-2" type="text" placeholder="Search for your favorite movies"
-        (keyup)="onKey($event)">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search for your favorite movies" (keyup)="onKey($event)">
 
-    <div *ngFor='let movie of movieList'>
+    <div *ngFor='let movie of list; let i = index'>
         <div class="row top-buffer">
             <div class="col-8">
                 <p class="h5">{{movie.title}}</p>
@@ -13,7 +30,9 @@
                 <img src='http://image.tmdb.org/t/p/w185/{{movie.poster_path}}' alt="No Image"><br>
             </div>
         </div>
-        <div class="col-8 row top-buffer border-bottom">
+
+        <button class="btn btn-lg btn-outline-primary " (click)="open(content, movie.id, i); ">Watch trailer</button>
+        <div class="col-8 row top-buffer border-bottom ">
             <p>Release date: {{movie.release_date}}</p>
         </div>
     </div>

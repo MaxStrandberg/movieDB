@@ -15,6 +15,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FeedbackListComponent } from './components/feedback-list/feedback-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import { FeedbackListComponent } from './components/feedback-list/feedback-list.
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
