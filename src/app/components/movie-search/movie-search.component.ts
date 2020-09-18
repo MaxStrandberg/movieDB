@@ -79,7 +79,11 @@ export class MovieSearchComponent implements OnInit {
   }
 
   createSafeUrl(url){
+    if(url === undefined){
+      return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/05DqIGS_koU');
+    }else{
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
   }
 
 
