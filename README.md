@@ -3,6 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 A movie database webpage with movie- and actor search made for fun using the movie db api.
+Also made a feedback form that saves name and feedback to firebase database and a page that shows saved feedbacks.
 
 ### Screenshots
 Searching for movies
