@@ -6,7 +6,13 @@ A movie database webpage with movie- and actor search made for fun using the mov
 
 ### Screenshots
 Searching for movies
+
 ![MovieSearch screenshot](https://github.com/MaxStrandberg/movieDB/blob/master/moviesearch_screenshot.png)
+
+Searching for actors
+
+![ActorSearch screenshot](https://github.com/MaxStrandberg/movieDB/blob/master/actorsearch_screenshot.png)
+
 
 ## Development server
 
