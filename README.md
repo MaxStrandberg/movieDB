@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 A movie database webpage with movie- and actor search made for fun using the movie db api.
 
 ### Screenshots
+Searching for movies
+![MovieSearch screenshot](https://github.com/MaxStrandberg/movieDB/blob/master/moviesearch_screenshot.png)
 
 ## Development server
 
