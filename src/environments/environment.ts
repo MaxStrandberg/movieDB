@@ -16,7 +16,7 @@ export const environment = {
   }
 };
 
-export const moviedbkey = '5168fd8e78b128991776c9d880afc6a5&query';
+export const moviedbkey = '5168fd8e78b128991776c9d880afc6a5';
 
 /*
  * For easier debugging in development mode, you can import the following file
