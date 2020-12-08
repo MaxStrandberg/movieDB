@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase:{
-    apiKey: 'AIzaSyB_BVe_F_JCswDd_wXGSqgaIBPzxalohZM',
-    authDomain: 'moviedb-eac23.firebaseapp.com',
-    databaseURL: 'https://moviedb-eac23.firebaseio.com',
-    projectId: 'moviedb-eac23',
-    storageBucket: 'moviedb-eac23.appspot.com',
-    messagingSenderId: '737344771984',
-    appId: '1:737344771984:web:6880132572d868af2f8515',
-    measurementId: 'G-2980EXRC1H'
+    apiKey: "AIzaSyB_BVe_F_JCswDd_wXGSqgaIBPzxalohZM",
+    authDomain: "moviedb-eac23.firebaseapp.com",
+    databaseURL: "https://moviedb-eac23.firebaseio.com",
+    projectId: "moviedb-eac23",
+    storageBucket: "moviedb-eac23.appspot.com",
+    messagingSenderId: "737344771984",
+    appId: "1:737344771984:web:6880132572d868af2f8515",
+    measurementId: "G-2980EXRC1H"
   }
 };
 

@@ -30,7 +30,7 @@ export class ActorSearchComponent implements OnInit {
         const results = Object.entries(data);
         this.actorList = [];
 
-        for (const result of results[3][1]) {
+        for (const result of results[1][1]) {
           if (result.known_for_department === 'Acting') {
             result.actorimg = 'https://image.tmdb.org/t/p/w92/' + result.profile_path;
             this.actorList.push(result);

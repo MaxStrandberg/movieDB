@@ -61,10 +61,11 @@ export class MovieSearchComponent implements OnInit {
   getMovieList(input: string) {
     this.movieService.getMovies(input).pipe(delay(100)).subscribe(async (data) => {
       const result = Object.entries(data);
-      this.movieList = result[3][1];
+      this.movieList = result[1][1];
       this.list = [];
 
       for (const movie of this.movieList) {
+        console.log(movie)
         this.list.push(movie);
       }
     });
